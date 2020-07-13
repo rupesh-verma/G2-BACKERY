@@ -1,0 +1,117 @@
+// .imgdoc {
+//     max-width: 55%;
+//       border: 0;
+//       margin-left: 22%;
+//       margin-top: 15px;
+//       border-radius: 50%;
+//       border: 6px solid;
+//       border-color: #cccccc;
+//   }
+//   .docname{
+//     padding: 3px;
+//     margin-top: 9px;
+//     color: #7ad8c1;
+//     font-size: 17px;
+//       font-weight: bold;
+//   }
+  
+//   .consultbutton {
+//     background-color: #85d632;
+//     border: none;
+//     color: white;
+//     padding: 5px 10px;
+//     text-align: center;
+//     text-decoration: none;
+//     border-radius: 4px;
+//     display: inline-block;
+//     font-size: 13px;
+//     margin: 4px 2px;
+//     font-weight: bold;
+//     cursor: pointer;
+//     margin-bottom: 9px;
+//   }
+ 
+//   .profilebg{
+//     --background: url("../../assets/img/sidebg.jpg");
+//   }
+
+//   .phar-details{
+//     color: black;
+//     font-family: raleway;
+//     margin-top: 7px
+// }
+
+
+.imgdoc {
+  max-width: 55%;
+    border: 0;
+    margin-left: 22%;
+    margin-top: 15px;
+    border-radius: 50%;
+    border: 6px solid;
+    border-color: #cccccc;
+}
+.docname{
+  padding: 3px;
+  margin-top: 9px;
+  color: #7ad8c1;
+  font-size: 17px;
+    font-weight: bold;
+}
+
+.consultbutton {
+  background-color: #85d632;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 9px;
+}
+
+.profilebg{
+  --background: url("../../assets/img/sidebg.jpg");
+}
+
+.phar-details{
+  color: black;
+  font-family: raleway;
+  margin-top: 7px
+}
+ion-input{
+  margin-top: -8px;
+  /* background-color: #efefef; */
+  /* border-color: white; */
+  border-radius: 4px;
+  border: 0.75px solid #eaeaea;
+}
+ion-textarea{
+  margin-top: -8px;
+  /* background-color: #efefef; */
+  /* border-color: white; */
+  border-radius: 4px;
+  border: 0.75px solid #eaeaea;
+}
+
+.buttonOrder {
+  background-color: #7ad8c1;
+  border: none;
+  color: white;
+  padding: 14px 113px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+

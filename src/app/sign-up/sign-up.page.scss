@@ -1,0 +1,57 @@
+.login {
+    //--background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.5)),url("../../assets/img/24-hours.png");
+    // background-size: cover;
+    text-align: center;
+    --background:radial-gradient(rgba(123, 97, 84, 0), rgba(255, 255, 255, 0)),url("../../assets/img/logintoast.jpg") no-repeat center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  ion-item {
+    --background: auto;
+  }
+  
+  input{
+    color : white !important;
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 45px;
+    color: white;
+  }
+  
+  .gotosign {
+    color: #ffffff;
+    font-size: 12.5px;
+  }
+  
+  .crt-act-btn {
+    // background: #78d6d1;
+    // color: white;
+    // float: right;
+    // margin-top: 10px;
+    // text-transform: none;
+    // font-weight: bolder;
+    // font-size: 16px;
+    // border-radius: 5px;
+    // padding: 3%;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    padding: 4%;
+    background: #ffa200 !important;
+  }
+  
+  .img1{
+      max-width: 30%;
+  }
+
+  .invalid {
+    border: 1px solid #ea6153;
+  }
+
+  p {
+    font-size: 0.8em;
+    color: #757575;
+  }

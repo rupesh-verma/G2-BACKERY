@@ -1,0 +1,52 @@
+.login {
+    //--background: url("../../assets/img/logibbg.jpeg");
+    text-align: center;
+    --background:radial-gradient(rgba(123, 97, 84, 0), rgba(255, 255, 255, 0)),url("../../assets/img/logintoast.jpg") no-repeat center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  ion-item {
+    --background: auto;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-top: 45px;
+    color: white;
+  }
+  
+  .gotosign {
+    color: #ffffff;
+    font-size: 12.5px;
+  }
+  
+  .crt-act-btn {
+    // background: #7ad8c1;
+    // border-radius: 10px;
+    // color: rgb(255, 255, 255);
+    // float: right;
+    // margin-top: 10px;
+    // text-transform: none;
+    // font-weight: bolder;
+    // font-size: 12px;
+    // padding: 4%;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+    padding: 4%;
+    background: #ffa200 !important;
+  }
+  
+  .img1 {
+    max-width: 50%;
+  }
+  .invalid {
+    border-bottom: 1px solid #ea6153;
+  }
+
+  p {
+    font-size: 0.8em;
+    color: #ffa200;
+    font-weight: bold;
+  }

@@ -1,0 +1,152 @@
+<ion-header style="position: unset;">
+  <ion-toolbar style="background-color: white;text-align: center;">
+	<ion-buttons slot="start" >
+		<ion-menu-button defaultHref="/"></ion-menu-button>
+  </ion-buttons>
+  <!-- (ionInput)='getItems($event)' -->
+  <!-- <h4 style="text-align: center;">Rahul Bakery</h4> -->
+  <img src='../../assets/img/homeLogo3.png' style="align-items: center;width:150px">
+  <ion-buttons slot="end">
+    <ion-icon  name="cart" style="float:right;font-size:25px;"></ion-icon>
+  </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-searchbar  style="margin: -10px 0px 0px 0px;background-color: white;"></ion-searchbar>
+</ion-header>
+<ion-content>
+  <ion-segment color="danger" scrollable value="gifts">
+    <ion-segment-button class='segCat' value="gifts">
+      <ion-label>Gifts</ion-label>
+      <ion-icon name="gift"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button class='segCat'  value="cakes">
+      <img src='https://img.icons8.com/cotton/2x/birthday-cake.png' style="width: 30px;margin: 12px 0 -10px 0;">
+      <ion-label>Cakes</ion-label>
+     </ion-segment-button>
+    <ion-segment-button  class='segCat' value="flowers">
+      <ion-label>Flowers</ion-label>
+      <ion-icon name="rose"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  <!-- [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)" -->
+  <ion-slides >
+    <ion-slide>
+      <img src='../../assets/img/slider1.jpg'>
+      <div class="text-block">
+        <h4>UPTO 70% OFF</h4>
+        <p>Get tasty cake on your order</p>
+      </div>
+    </ion-slide>
+    <ion-slide><img src='../../assets/img/slider2.jpg'></ion-slide>
+    <ion-slide><img src='../../assets/img/slider3.jpg'></ion-slide>
+    <ion-slide><img src='../../assets/img/slider4.jpg'></ion-slide>
+    <ion-slide><img src='../../assets/img/slider5.jpg'></ion-slide>
+   </ion-slides>
+  
+   
+
+  <!-- <ion-item style="--background: #e2a7a961;color: #542b1d;">
+    <ion-button slot="end" > more.. </ion-button>
+    <ion-label><b>Flavoured cake</b></ion-label>
+  </ion-item> -->
+  
+ 
+<div>
+  <ion-grid >
+    <ion-row>
+      <ion-col >
+        <div  (click)="product()">
+        <img class="topOffer" src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1FkcOBalUhjtsopv9B4MiEaJeaotlyIVbdroPjzTPVuNVpyAb&usqp=CAU'>
+        <div class="text-block">
+          <h4>Nature</h4>
+          <p>What a beautiful sunrise</p>
+        </div>
+        </div>
+
+      </ion-col>
+      <ion-col>
+        <div  (click)="product()">
+        <img class="topOffer" src='https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg'>
+        <div class="text-block">
+          <h4>Nature</h4>
+          <p>What a beautiful sunrise</p>
+        </div>
+        </div>
+      </ion-col>
+      </ion-row>
+    
+  </ion-grid>
+</div>
+
+
+
+
+<ion-item style="--background: #e2a7a961;color: #542b1d;">
+  <ion-button slot="end" (click)="product()"> more.. </ion-button>
+  <ion-label><b>All Products</b></ion-label>
+</ion-item>
+
+
+<div>
+<ion-grid >
+  <ion-row>
+    <ion-col >
+        <div  (click)="product()">
+      <img class="topOffer" src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1FkcOBalUhjtsopv9B4MiEaJeaotlyIVbdroPjzTPVuNVpyAb&usqp=CAU'>
+      <div class="text-block">
+        <h4>Nature</h4>
+        <p>What a beautiful sunrise</p>
+      </div>
+      </div>
+      
+    </ion-col>
+    <ion-col>
+      <div  (click)="product()">
+      <img class="topOffer" src='https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg'>
+      <div class="text-block">
+        <h4>Nature</h4>
+        <p>What a beautiful sunrise</p>
+      </div>
+      </div>
+    </ion-col>
+    <ion-col >
+      <div  (click)="product()">
+      <img class="topOffer" src='https://theneffkitchen.com.au/wp-content/uploads/2018/12/NEFF_Feature_Summer-pavlova-1024x576.jpg'>
+      <div class="text-block">
+        <h4>Nature</h4>
+        <p>What a beautiful sunrise</p>
+      </div>
+      </div>
+
+    </ion-col>
+    </ion-row>
+  <ion-row>
+    <ion-col >
+        <div  (click)="product()">
+      <img class="topOffer" src='https://theneffkitchen.com.au/wp-content/uploads/2018/12/NEFF_Feature_Summer-pavlova-1024x576.jpg'>
+      <div class="text-block">
+        <h4>Nature</h4>
+        <p>What a beautiful sunrise</p>
+      </div>
+      </div>
+      
+    </ion-col>
+    <ion-col>
+      <img class="topOffer" src='https://cdn.theculturetrip.com/wp-content/uploads/2017/12/sweet-1222759_1920.jpg'>
+      <div class="text-block">
+        <h4>Nature</h4>
+        <p>What a beautiful sunrise</p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <img class="topOffer" src='https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg'>
+      <div class="text-block">
+        <h4>Nature</h4>
+        <p>What a beautiful sunrise</p>
+      </div>
+    </ion-col>
+    </ion-row>
+</ion-grid>
+</div>
+
+</ion-content>

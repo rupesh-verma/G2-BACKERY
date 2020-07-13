@@ -1,0 +1,93 @@
+.imgdoc {
+    max-width: 55%;
+      border: 0;
+      margin-left: 22%;
+      margin-top: 15px;
+      border-radius: 50%;
+      border: 6px solid;
+      border-color: #cccccc;
+  }
+  .docname{
+    padding: 3px;
+    margin-top: 9px;
+    color: #7ad8c1;
+    font-size: 17px;
+      font-weight: bold;
+  }
+
+  .docdegree{
+    padding: 3px;
+    margin-top: 0px;
+    color: #5e9084;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: raleway
+  }
+
+  .doclic{
+    padding: 3px;
+    margin-top: 0px;
+    color: #5e9084;
+    font-size: 13px;
+    font-weight: bold;
+    
+  }
+
+  .profilebg{
+    --background: url("../../assets/img/sidebg.jpg");
+  }
+
+  .phar-details{
+    color: black;
+    font-family: raleway;
+    margin-top: 7px
+}
+
+
+
+.footercardbtn1 {
+    background-color: #7ad8c1;
+    border: none;
+    color: white;
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 9px;
+  }
+  .footercardbtn2 {
+    background-color: #7ad8c1;
+    border: none;
+    color: white;
+    padding: 9px 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 9px;
+  }
+
+  .footercardbtn3 {
+    background-color: #7ad8c1;
+    border: none;
+    color: white;
+    padding: 9px 7px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 9px;
+  }

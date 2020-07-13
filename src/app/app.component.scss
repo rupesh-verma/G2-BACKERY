@@ -1,0 +1,41 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These
+// styles are for the entire app and not just one component. Additionally, this
+// file can hold Sass mixins, functions, and placeholder classes to be imported
+// and used throughout the application.
+.user-img {
+    max-width: 100%;
+    height: 6em;
+    width: 6em;
+    margin-top: 36px;
+  }
+  
+  .sidebar-menu {
+    --background: linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.65)),url(../assets/img/sidebg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+  .item-bg {
+    color: rgb(0, 0, 0);
+    --background: transparent;
+  }
+  
+  .logoutButton {
+    margin-top: 16px;
+    --border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+  }
+  .font {
+    font-family: "raleway";
+  }
+  

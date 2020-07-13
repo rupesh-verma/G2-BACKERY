@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" routerLink="/tabs/tab1" fill="clear">
+      <ion-icon name="arrow-round-back" color="toolbar"></ion-icon>
+    </ion-button>
+    <ion-title color="toolbar" style="text-transform: none">Change password</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="text-align: center">
+  <ion-card>
+      <img class="user-img" src="assets/img/user-img.png" />
+    <ion-list lines="none">
+      <form [formGroup]="slideOneForm">
+        <ion-item>
+          <ion-label position="floating">Enter old password</ion-label>
+          <ion-input formControlName="old_password" type="password"
+            [class.invalid]="!slideOneForm.controls.old_password.valid && (slideOneForm.controls.old_password.dirty || submitAttempt)">
+          </ion-input>
+        </ion-item>
+        <ion-item
+          *ngIf="!slideOneForm.controls.old_password.valid  && (slideOneForm.controls.old_password.dirty || submitAttempt)">
+          <p>Please enter old password.</p>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Enter New password</ion-label>
+          <ion-input formControlName="new_password" type="password"
+            [class.invalid]="!slideOneForm.controls.new_password.valid && (slideOneForm.controls.new_password.dirty || submitAttempt)">
+          </ion-input>
+        </ion-item>
+        <ion-item
+          *ngIf="!slideOneForm.controls.new_password.valid  && (slideOneForm.controls.new_password.dirty || submitAttempt)">
+          <p>Please enter new password.</p>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirm New password</ion-label>
+          <ion-input formControlName="confirm_new_password" type="password"
+            [class.invalid]="!slideOneForm.controls.confirm_new_password.valid && (slideOneForm.controls.confirm_new_password.dirty || submitAttempt)">
+          </ion-input>
+        </ion-item>
+        <ion-item
+          *ngIf="!slideOneForm.controls.confirm_new_password.valid  && (slideOneForm.controls.confirm_new_password.dirty || submitAttempt)">
+          <p>Please re-enter new password.</p>
+        </ion-item>
+      </form>
+    </ion-list>
+
+    <div style="text-align: center">
+      <button color="toolbar" (click)="save()" class="buttonOrder">Update password</button>
+    </div>
+
+    <!-- <ion-button color="toolbar" ><span style="color: white">Update</span> </ion-button> -->
+
+  </ion-card>
+
+
+</ion-content>

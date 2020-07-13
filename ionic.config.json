@@ -1,0 +1,7 @@
+{
+  "name": "RahulBakery",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

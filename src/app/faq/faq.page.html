@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" routerLink="/tabs/tab1" fill="clear">
+      <ion-icon name="arrow-round-back" color="toolbar"></ion-icon>
+    </ion-button>
+    <ion-title color="toolbar">FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let d of Provided; let i = index" [ngClass]="{ active: isGroupShown1(i) }">
+
+    <ion-row style="color: black;font-family: raleway;font-size: 15px;padding: none ">
+      <ion-col size="1">
+        <ion-icon style="color: #7ad8c1;font-size:18px" name="{{ d.name }}"></ion-icon>
+      </ion-col>
+      <ion-col (click)="toggleGroup1(i)" size="10"><b style="font-size: 14.5px">{{ d.label }}</b></ion-col>
+      <ion-col size="1">
+        <ion-icon (click)="toggleGroup1(i)" style="color: #7ad8c1;font-size: 19px;float: right" [name]="
+          isGroupShown1(i) ? 'arrow-round-down' : 'arrow-round-forward'">
+        </ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <div style="margin-left: 35px;margin-right: 35px;font-size: 14px;font-family: raleway" *ngIf="isGroupShown1(i)">
+      {{ d.description }}
+    </div>
+    <hr style="background-color: rgb(242, 242, 242)" />
+
+
+
+  </ion-list>
+</ion-content>

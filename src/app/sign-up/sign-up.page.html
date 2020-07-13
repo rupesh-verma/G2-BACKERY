@@ -1,0 +1,69 @@
+<ion-content class="login" padding style="font-family: raleway">
+  <div style="margin-top: 25px;text-align: center" class="heading">
+    
+  </div>
+
+  <ion-col>
+    <h4 style="color: #ffa200;font-size: 35px;"><b>Signup</b></h4>
+  </ion-col>
+
+  <!-- signup inputs -->
+  <form [formGroup]="signupform" style="padding: 10px;background: #98989885;border-radius: 5px;color: #ffa200 !important;">
+    <ion-item class="ion-margin-top">
+      <ion-label position="floating" style="color: #ffa200;">Mobile number</ion-label>
+      <ion-input formControlName="username" type="text" [class.invalid]="!signupform.controls.username.valid && (signupform.controls.username.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!signupform.controls.username.valid  && (signupform.controls.username.dirty || submitAttempt)">
+    <p>Please enter 10 digit mobile number</p>
+     </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #ffa200;">Email address</ion-label>
+      <ion-input formControlName="email" type="text"
+      [class.invalid]="!signupform.controls.email.valid && (signupform.controls.email.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!signupform.controls.email.valid  && (signupform.controls.email.dirty || submitAttempt)">
+      <p>Please enter a valid email id.</p>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #ffa200;">Full Name</ion-label>
+      <ion-input formControlName="name" type="text"
+      [class.invalid]="!signupform.controls.name.valid && (signupform.controls.name.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!signupform.controls.name.valid  && (signupform.controls.name.dirty || submitAttempt)">
+      <p>Please enter a valid name.</p>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #ffa200;">Password</ion-label>
+      <ion-input formControlName="password" type="password" [class.invalid]="!signupform.controls.password.valid && (signupform.controls.password.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!signupform.controls.password.valid  && (signupform.controls.password.dirty || submitAttempt)">
+      <p>Password must contain 1 uppercase and 1 lowercase letter with special character</p>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #ffa200;">Confirm Password</ion-label>
+      <ion-input  type="password" formControlName="confirm_password"
+      [class.invalid]="!signupform.controls.confirm_password.valid && (signupform.controls.confirm_password.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item
+    *ngIf="!signupform.controls.confirm_password.valid  && (signupform.controls.confirm_password.dirty || submitAttempt)">
+    <p>Password and confirm password must match.</p>
+  </ion-item>
+    <!-- signup inputs -->
+
+    <!-- buttons starts-->
+    <ion-row class="ion-margin-top" (click)="register()">
+      <ion-col class="crt-act-btn">
+        Create account
+      </ion-col>
+    </ion-row>
+  </form>
+  <!-- buttons ends-->
+  <ion-row style="text-align: center" class="ion-margin-top">
+    <ion-col>
+      <span class="gotosign">Have an account?<br />
+        <span class="gotosign" (click)="goToLogin()" tappable><b  style="color: #ffa200;">Login</b></span></span>
+    </ion-col>
+  </ion-row>
+
+  <!-- email setup ends -->
+</ion-content>

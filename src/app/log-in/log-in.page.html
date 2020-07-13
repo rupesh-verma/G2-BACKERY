@@ -1,0 +1,44 @@
+<ion-content class="login" padding>
+  <div style="margin-top: 100px;text-align: center" class="heading">
+  </div>
+  <ion-row>
+    <ion-col>
+      <h4 style="color: #ffa200;font-size: 35px;"><b>Login</b></h4>
+    </ion-col>
+  </ion-row>
+
+  <!-- signup inputs -->
+  <form [formGroup]="userlogin" style="padding: 10px;background: #98989885;border-radius: 5px;color: #ffa200 !important;">
+    <ion-item>
+      <ion-label style="color: #ffa200;" position="floating">Mobile No.</ion-label>
+      <ion-input formControlName="username" type="text" [class.invalid]="!userlogin.controls.username.valid && (userlogin.controls.username.dirty || submitAttempt)" color="black"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!userlogin.controls.username.valid  && (userlogin.controls.username.dirty || submitAttempt)">
+        <p>Please enter 10 digit mobile number</p>
+         </ion-item>
+    <ion-item>
+      <ion-label  style="color: #ffa200;"  position="floating">Password</ion-label>
+      <ion-input formControlName="password" color="black" type="password" [class.invalid]="!userlogin.controls.password.valid && (userlogin.controls.password.dirty || submitAttempt)"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!userlogin.controls.password.valid  && (userlogin.controls.password.dirty || submitAttempt)">
+        <p>Password must be same as used in sign-up</p>
+      </ion-item>
+    <!-- signup inputs -->
+
+    <!-- buttons starts-->
+    <ion-row class="ion-margin-top">
+      <ion-col (click)="login()" tappable class="crt-act-btn">
+        Login
+      </ion-col>
+    </ion-row>
+  </form>
+  <!-- buttons ends-->
+  <ion-row style="text-align: center" class="ion-margin-top">
+    <ion-col>
+      <span class="gotosign">Don't have an account yet?<br />
+        <span class="gotosign" (click)="goToLogin()" tappable><b style="color: #ffa200;">Sign-Up</b></span></span>
+    </ion-col>
+  </ion-row>
+
+  <!-- email setup ends -->
+</ion-content>

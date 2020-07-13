@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/tabs/tab1" slot="start" fill="clear">
+      <ion-icon name="arrow-round-back" color="toolbar"></ion-icon>
+    </ion-button>
+    <ion-title color="toolbar" style="text-transform: none">Doctor's Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="profilebg">
+
+    <div style="margin-bottom: 15px">
+      <img class="imgdoc" src="{{serverPath}}/{{navParam.profile_pic}}" alt="">
+      <div style="text-align: center" class="docname">Dr. {{navParam.name}}</div>
+      <div style="text-align: center" class="docdegree">{{navParam.degree}} ({{navParam.department}})</div>
+      <div style="text-align: center" class="docdegree" *ngIf="navParam.degree==null">MBBS (General medicine)</div>
+      <div style="text-align: center" class="doclic">{{navParam.license_no}}</div>
+      <div class="phar-details">
+        <ion-row>
+          <ion-col size="1">
+            <ion-icon name="calendar"></ion-icon>
+          </ion-col>
+          <ion-col style="font-weight: bold" size="3">
+           Age
+          </ion-col>
+          <ion-col size="8">
+            <span>{{navParam.age}} years</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="1">
+            <ion-icon name="male"></ion-icon>
+          </ion-col>
+          <ion-col style="font-weight: bold" size="3">
+            Gender
+          </ion-col>
+          <ion-col size="8">
+            <span>{{navParam.gender}}</span>
+          </ion-col>
+        </ion-row>
+        <hr style="background-color: rgb(228, 228, 228)">
+        <ion-row>
+          <ion-col size="1">
+            <ion-icon name="mail"></ion-icon>
+          </ion-col>
+          <ion-col style="font-weight: bold" size="3">
+            Email
+          </ion-col>
+          <ion-col size="8">
+            <span>{{navParam.email}}</span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="1">
+            <ion-icon name="call"></ion-icon>
+          </ion-col>
+          <ion-col style="font-weight: bold" size="3">
+            Mobile No.
+          </ion-col>
+          <ion-col size="8">
+            {{navParam.mobile_no}}
+          </ion-col>
+        </ion-row>
+        <hr style="background-color: rgb(228, 228, 228)">
+        <ion-row>
+          <ion-col size="1">
+            <ion-icon name="home"></ion-icon>
+          </ion-col>
+          <ion-col style="font-weight: bold" size="3">
+            Address
+          </ion-col>
+          <ion-col size="8">
+           {{navParam.address}}
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <ion-row>
+        <ion-col>
+          <button (click)="goTochatRoom()" class="footercardbtn3">
+            <ion-icon name="chatbubbles"></ion-icon> Chat Now
+          </button>
+        </ion-col>
+        <ion-col>
+          <button (click)="callNow(navParam.mobile_no)" class="footercardbtn1">
+            <ion-icon name="call"></ion-icon> Call Now
+          </button>
+        </ion-col>
+        <ion-col>
+          <button (click)="goToDoctorsMap()" class="footercardbtn2">
+            <ion-icon name="pin"></ion-icon> Locate
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+</ion-content>

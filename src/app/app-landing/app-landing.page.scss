@@ -1,0 +1,20 @@
+.img1 {
+    max-width: 43%;
+  }
+  
+  .social-icon1 {
+    margin-right: 7px;
+    height: 15px;
+  }
+  
+  .font {
+    font-family: "raleway";
+  }
+  
+  .app-landing {
+    //--background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.5)),url("../../assets/img/stethoscope.png");
+    --background:radial-gradient(rgba(123, 97, 84, 0.33), rgb(255, 255, 255)),url("../../assets/img/landingPage.png") no-repeat center fixed;
+    background-size: cover;
+    color: white;
+  }
+  

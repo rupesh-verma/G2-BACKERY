@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="toolbar"></ion-menu-button>
+      <ion-title color="toolbar"> {{ viewTitle }}</ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="toolbar" (click)="today()">Today</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Card for adding a new event -->
+  <ion-card>
+    <ion-card-header tappable (click)="collapseCard = !collapseCard">
+      <ion-card-title>Book new appointment <ion-icon style="color: #7ad8c1;font-size: 25px;float: right"
+          [name]="collapseCard ? 'arrow-round-down' : 'arrow-round-forward'"></ion-icon>
+      </ion-card-title>
+
+    </ion-card-header>
+    <ion-card-content *ngIf="collapseCard">
+      <ion-slides [options]="slideOpts1" speed="3000" loop="true">
+        <ion-slide>
+            
+            <ion-col size="3" text-left>
+                <ion-button fill="clear" (click)="back()">
+                  <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="6" text-right>
+                  <ion-item>
+                      <ion-datetime displayFormat="MM/DD/YYYY" placeholder="Appointment subject" pickerFormat="MMM D YYYY" [(ngModel)]="event.startTime"
+                        [min]="minDate" (ionChange)='onChangeTime($event.target.value)'></ion-datetime>
+                    </ion-item>
+                </ion-col>
+              <ion-col size="3" text-right>
+                <ion-button fill="clear" (ionChange)="next()">
+                  <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+                </ion-button>
+              </ion-col>
+        
+        </ion-slide>
+        <ion-slide>
+            <ion-col size="3" text-left>
+                <ion-button fill="clear" (click)="back()">
+                  <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="6" text-right >
+                  <ion-select placeholder="Time slot" >
+                      <ion-select-option *ngFor="let ts of timeslot; let i =index;" value="{{ts}}">{{ts}}</ion-select-option>
+                    </ion-select>
+                  <!-- <ion-item>
+                      <ion-label>Time</ion-label>
+                      <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="event.endTime"
+                        [min]="minDate"></ion-datetime>
+                    </ion-item> -->
+                </ion-col>
+              <ion-col size="3" text-right>
+                <ion-button fill="clear" (click)="next()">
+                  <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+                </ion-button>
+              </ion-col>
+           
+        </ion-slide>
+        <ion-slide>
+          <ion-card style="width: 100%;">
+              <ion-item>
+                  <ion-select placeholder="Appointment subject" >
+                      <ion-select-option *ngFor="let sb of slotSubject; let i =index;" value="{{sb}}.i">{{sb}}</ion-select-option>
+                    </ion-select>
+                  <!-- <ion-input type="text" placeholder="Appointment subject" [(ngModel)]="event.title"></ion-input> -->
+                </ion-item>
+                <ion-item>
+                    <ion-textarea type="textarea" placeholder="Remark" [(ngModel)]="event.desc"></ion-textarea>
+                </ion-item>
+                <ion-button fill="outline" expand="block" (click)="addEvent()" [disabled]="event.title == ''">Save Appointment
+                  </ion-button>
+          </ion-card>
+          
+        </ion-slide>
+      </ion-slides>
+
+
+
+
+<!-- 
+      <ion-item>
+        <ion-input type="text" placeholder="Appointment subject" [(ngModel)]="event.title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="MMM D YYYY" [(ngModel)]="event.startTime"
+          [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="event.endTime"
+          [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-textarea type="textarea" placeholder="Remark" [(ngModel)]="event.desc"></ion-textarea>
+      </ion-item>
+      
+      <ion-button fill="outline" expand="block" (click)="addEvent()" [disabled]="event.title == ''">Save Appointment
+      </ion-button> -->
+<!-- <ion-item>
+        <ion-label>All Day?</ion-label>
+        <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>
+      </ion-item> -->
+    </ion-card-content>
+  </ion-card>
+  <!-- <div style="padding: 6px;">
+    <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+      (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)"
+      (onTimeSelected)="onTimeSelected($event)" startHour="6" endHour="20" step="30" startingDayWeek="1">
+    </calendar>
+  </div> -->
+
+
+  <!-- <ion-row>
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'secondary'"
+        (click)="changeMode('month')">Month</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'week' ? 'primary' : 'secondary'"
+        (click)="changeMode('week')">Week</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'secondary'" (click)="changeMode('day')">
+        Day</ion-button>
+    </ion-col>
+
+    <ion-col size="6" text-left>
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="6" text-right>
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row> -->
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-content class="app-landing">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <ion-row style="margin-top: 28px;margin-bottom: 28px;">
+    <ion-col>
+      <div padding>
+        <h2 style="font-weight: bolder;text-align: center;font-family: 'sofia';color: #3c1e10;" class="font">
+          Welcome to <br />
+          <span style="font-size: 35px;font-weight:bolder">Rahul Bakery</span>
+        </h2>
+        <p style="font-size: 13.5px;color: #777777" class="font">
+          
+        </p>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <div style="text-align: center;padding: 7px">
+    <img class="img1" src="../assets/img/logo.png" />
+    <!-- <p style="font-size: 15.5px;text-align: center" class="font">
+      Continue with social accounts
+    </p> 
+
+    <ion-row style="text-align: center">
+      <ion-col>
+        <ion-button color="black" style="text-transform: none" (click)="goToRegister()" shape="round" fill="outline"><img
+            class="social-icon1" src="assets/img/facebook.png" />Facebook</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="black" style="text-transform: none" (click)="goToRegister()" shape="round" fill="outline"><img
+            class="social-icon1" src="assets/img/ggle.png" />Google</ion-button>
+      </ion-col>
+    </ion-row>
+    <span style="font-size: 15.5px;font-weight: bolder" class="font">
+      Or
+    </span>-->
+    <div style="padding:30px 0"></div>
+    <ion-button style="text-transform: none" color="toolbar" (click)="goToLogin()" expand="block">
+      <span style="color: white;font-weight: bolder;">Login</span> </ion-button>
+    <ion-button style="text-transform: none" color="toolbar" (click)="goToRegister()" expand="block"><span
+        style="color: white;font-weight: bolder;">Signup</span></ion-button>
+  </div>
+
+  <div>
+    <ion-row style="text-align: center">
+      <ion-col>
+        <p class="font" style="font-size: 12px;">
+          By logging in or registering, I agree to our
+          <a (click)="goToTerms()"><span style="color: #fa9d3f">Terms of Service</span> </a> and
+          <a (click)="goToPrivacy()"><span style="color: #fa9d3f">Privacy Policy</span> </a>.
+        </p>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

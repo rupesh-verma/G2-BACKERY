@@ -1,0 +1,111 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/tabs/tab1" slot="start" fill="clear">
+      <ion-icon name="arrow-round-back" color="toolbar"></ion-icon>
+    </ion-button>
+    <ion-title color="toolbar" style="text-transform: none">Transactions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <span *ngFor="let u of data; let i = index" [ngClass]="{ active: isGroupShown2(i) }">
+      <div style="margin-left: 6px;margin-right: 6px;">
+        <ion-card-header
+          style="padding-left: 10px;padding-bottom: 16px;padding-right: 10px;padding-top: 16px;;background-color: #fbfbfb">
+          <div (click)="toggleGroup2(i)" style="color: black;font-size: 15px;padding: none ">
+            <ion-icon name="arrow-dropright"></ion-icon>
+            Txn ID&nbsp;:&nbsp;{{u.ref_txn_id}} &nbsp;|&nbsp; Amount&nbsp;:&nbsp;{{u.amount}}
+            <ion-icon style="color: #7ad8c1;font-size: 19px;float: right"
+              [name]="isGroupShown2(i) ? 'arrow-round-down' : 'arrow-round-forward'">
+            </ion-icon>
+          </div>
+          <div style="margin-top: 21px;padding :10px;background-color: white;font-family: raleway"
+            *ngIf="isGroupShown2(i)">
+            <ion-row>
+              <ion-col size="6">
+                Customer Name:
+              </ion-col>
+              <ion-col size="6">
+                {{ u.first_name }}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                Transaction ID:
+              </ion-col>
+              <ion-col size="6">
+                {{ u.ref_txn_id }}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                Amount :
+              </ion-col>
+              <ion-col size="6">
+                {{ u.amount }}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                Status :
+              </ion-col>
+              <ion-col size="6">
+                {{ u.status }}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                Created :
+              </ion-col>
+              <ion-col size="6">
+                {{ u.created }}
+              </ion-col>
+            </ion-row>
+          </div>
+
+        </ion-card-header>
+        <hr style="background-color: rgb(243, 243, 243)" />
+      </div>
+    </span>
+  </ion-list>
+</ion-content> -->
+
+<ion-header style="">
+  <ion-toolbar>
+    <ion-button color="white" routerLink="/tabs/tab1" slot="start" fill="clear">
+      <ion-icon name="arrow-round-back" ></ion-icon>
+    </ion-button>
+    <ion-title color="toolbar" style="text-transform: none;color: white;">Product Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-slides  style="height:40%;margin-left: -16px;margin-top: -16px;margin-right: -16px;">
+    <ion-slide><img src='https://cdn.pixabay.com/photo/2017/07/31/16/00/cake-2558610_960_720.jpg'></ion-slide>
+    <ion-slide><img src='../../assets/img/slider2.jpg'></ion-slide>
+    <ion-slide><img src='../../assets/img/slider3.jpg'></ion-slide>
+    <ion-slide><img src='../../assets/img/slider4.jpg'></ion-slide>
+    <ion-slide><img src='../../assets/img/slider5.jpg'></ion-slide>
+   </ion-slides>
+
+   <ion-item>
+    <ion-label>₹ 100</ion-label>
+    <ion-note slot="end" color="success">in stock</ion-note>
+  </ion-item>
+  <div style="margin:10px;">
+    <h5>Lava Cake | Chocolate Lava Cake (Eggless)</h5>
+    <h6 style="color: gray;text-align: justify;">chocolate lava cake recipe | eggless molten choco lava cake recipe with detailed photo and video recipe. basically, a chocolate cake recipe with warm and hard with the outer covering and still runny chocolate at the centre. it is popular chocolate cake dessert recipe in india and huge credit goes to dominos and pizza hut to make it even more popular.</h6>
+    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+  </div>
+  <ion-item style="--background: #e2a7a961;">
+    <ion-label><b>Quantity</b></ion-label>
+    <ion-note slot="end" ><ion-button style="margin-top: -5px;">-</ion-button><input style="width: 40px;height: 27px;margin-top: -5px;font-size: 15px;text-align: center;" value="1"><ion-button style="margin-top: -5px;">+</ion-button></ion-note>
+  </ion-item>
+  
+  <ion-item style="--background: #e2a7a961;">
+    <ion-label><b>Total Price</b></ion-label>
+    <ion-note slot="end" style="font-size: 15px;font-weight: bold;">₹ 100</ion-note>
+  </ion-item>
+  <ion-button style="width: 100%;margin: 5px auto;">ADD TO CART</ion-button>
+</ion-content>

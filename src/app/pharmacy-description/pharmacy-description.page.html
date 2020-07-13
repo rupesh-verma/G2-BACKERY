@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/pharmacy/pharmacylist" slot="start" fill="clear">
+      <ion-icon name="arrow-round-back" color="toolbar"></ion-icon>
+    </ion-button>
+    <ion-title color="toolbar" style="text-transform: none">Pharmacy description</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <div style="text-align: center">
+      <ion-slides pager="true" [options]="slideOpts" speed="3000" loop="true">
+        <ion-slide>
+          <img (click)="goToPharmacyDescription()" style="margin-top: -16px;" src="{{serverPath}}/{{navParam.photo}}"
+            alt="">
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="phar-details">
+      <ion-row>
+        <ion-col size="1">
+          <ion-icon name="desktop"></ion-icon>
+        </ion-col>
+        <ion-col style="font-weight: bold" size="3">
+          Pharmacy name
+        </ion-col>
+        <ion-col size="8">
+          <span>{{navParam.name}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="1">
+          <ion-icon name="git-compare"></ion-icon>
+        </ion-col>
+        <ion-col style="font-weight: bold" size="3">
+          Store Distance
+        </ion-col>
+        <ion-col size="8">
+          <span>{{1.5 | number:'1.0-1'}} Kilometer</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="1">
+          <ion-icon name="call"></ion-icon>
+        </ion-col>
+        <ion-col style="font-weight: bold" size="3">
+          Mobile No.
+        </ion-col>
+        <ion-col size="8">
+          {{navParam.contact_no}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="1">
+          <ion-icon name="home"></ion-icon>
+        </ion-col>
+        <ion-col style="font-weight: bold" size="3">
+          Address
+        </ion-col>
+        <ion-col size="8">
+          {{navParam.address}}
+        </ion-col>
+      </ion-row>
+    </div>
+    <div style="text-align: center">
+      <ion-row>
+        <ion-col>
+          <button (click)="goTochatRoom()" class="footercardbtn3">
+            <ion-icon name="chatbubbles"></ion-icon> Chat Now
+          </button>
+        </ion-col>
+        <ion-col>
+          <button (click)="callNow(navParam.contact_no)" class="footercardbtn1">
+            <ion-icon name="call"></ion-icon> Call Now
+          </button>
+        </ion-col>
+        <ion-col>
+          <button (click)="goToPharmacymap()" class="footercardbtn2" (click)="goToConsultNow()">
+            <ion-icon name="pin"></ion-icon> Locate
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+</ion-content>

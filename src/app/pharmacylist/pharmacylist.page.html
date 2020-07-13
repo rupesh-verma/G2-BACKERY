@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="toolbar"></ion-menu-button>
+      <ion-title color="toolbar">Pharmacy nearby</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col *ngFor="let pharmacy of pharmacyData; let i=index" size="6">
+      <ion-card style="text-align: center">
+        <ion-badge (click)="presentAlert(i)" style="margin-bottom: -14px;margin-left: 116px;" color="head">
+          <ion-icon style="font-size: 17px;" name="information-circle" color="white">
+          </ion-icon>
+        </ion-badge>
+        <img (click)="goToPharmacyDescription(i)" style="margin-top: -16px;" src="{{serverPath}}/{{pharmacy.photo}}" alt="">
+        <ion-badge style="margin-top: -9px;" color="secondary">{{pharmacy.distance | number:'1.0-1'}} km <ion-icon name="walk"></ion-icon>
+        </ion-badge>
+        <div class="storename">{{pharmacy.name}}</div>
+        <span style="font-size: 10px;font-family: raleway;">{{pharmacy.address}}</span><br>
+        <button class="consultbutton" (click)="callNow(pharmacy.contact_no)">Call Now</button>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+ 
+
+
+
+
+
+
+
+
+</ion-content>
