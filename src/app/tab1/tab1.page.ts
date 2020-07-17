@@ -14,6 +14,12 @@ export class Tab1Page {
   public serverPath = 'http://app.quicktreatment4u.com/media/';
   public coordinates: any ;
   public doctorData: any;
+  slideOpt = {
+    loop: true,
+    autoplay: true,
+    
+  };
+
   constructor(public navCtrl: NavController,
               public geolocation: Geolocation,
               public dataService: DataproviderService,

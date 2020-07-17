@@ -14,33 +14,42 @@
   <ion-searchbar  style="margin: -10px 0px 0px 0px;background-color: white;"></ion-searchbar>
 </ion-header>
 <ion-content>
-  <ion-segment color="danger" scrollable value="gifts">
+  <ion-segment color="danger" scrollable value="gifts"  class="scrollable-menu">
     <ion-segment-button class='segCat' value="gifts">
       <ion-label>Gifts</ion-label>
       <ion-icon name="gift"></ion-icon>
     </ion-segment-button>
     <ion-segment-button class='segCat'  value="cakes">
-      <img src='https://img.icons8.com/cotton/2x/birthday-cake.png' style="width: 30px;margin: 12px 0 -10px 0;">
+      <img src='https://img.icons8.com/cotton/2x/birthday-cake.png' style="width: 30px">
       <ion-label>Cakes</ion-label>
      </ion-segment-button>
     <ion-segment-button  class='segCat' value="flowers">
       <ion-label>Flowers</ion-label>
       <ion-icon name="rose"></ion-icon>
     </ion-segment-button>
+    <ion-segment-button class='segCat' value="flowers1">
+      <ion-label>Flowers</ion-label>
+      <ion-icon name="rose"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button class='segCat' value="flowers2">
+      <ion-label>Flowers</ion-label>
+      <ion-icon name="rose"></ion-icon>
+    </ion-segment-button>
   </ion-segment>
+  
   <!-- [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)" -->
-  <ion-slides >
+  <ion-slides [options]="slideOpt"  pager="true" paginationType="fraction" effect="fade" loop="true">
     <ion-slide>
-      <img src='../../assets/img/slider1.jpg'>
+      <img src='assets/img/slider3.jpg'>
       <div class="text-block">
         <h4>UPTO 70% OFF</h4>
         <p>Get tasty cake on your order</p>
       </div>
     </ion-slide>
-    <ion-slide><img src='../../assets/img/slider2.jpg'></ion-slide>
-    <ion-slide><img src='../../assets/img/slider3.jpg'></ion-slide>
-    <ion-slide><img src='../../assets/img/slider4.jpg'></ion-slide>
-    <ion-slide><img src='../../assets/img/slider5.jpg'></ion-slide>
+    <ion-slide><img src='assets/img/slider2.jpg'></ion-slide>
+    <ion-slide><img src='assets/img/slider1.jpg'></ion-slide>
+    <ion-slide><img src='assets/img/slider4.jpg'></ion-slide>
+    <ion-slide><img src='assets/img/slider5.jpg'></ion-slide>
    </ion-slides>
   
    
@@ -53,24 +62,24 @@
  
 <div>
   <ion-grid >
-    <ion-row>
+    <ion-row class="border-bottom-thik">
       <ion-col >
         <div  (click)="product()">
-        <img class="topOffer" src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1FkcOBalUhjtsopv9B4MiEaJeaotlyIVbdroPjzTPVuNVpyAb&usqp=CAU'>
-        <div class="text-block">
+        <img class="topOffer" src='//d3s16h6oq3j5fb.cloudfront.net/1.74.3.0/img/mobile-home/birthday-2.png'>
+        <!-- <div class="text-block">
           <h4>Nature</h4>
           <p>What a beautiful sunrise</p>
-        </div>
+        </div> -->
         </div>
 
       </ion-col>
       <ion-col>
         <div  (click)="product()">
-        <img class="topOffer" src='https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg'>
-        <div class="text-block">
+        <img class="topOffer" src='//d3s16h6oq3j5fb.cloudfront.net/1.74.3.0/img/mobile-home/anniversary-2.png'>
+        <!-- <div class="text-block">
           <h4>Nature</h4>
           <p>What a beautiful sunrise</p>
-        </div>
+        </div> -->
         </div>
       </ion-col>
       </ion-row>
@@ -81,10 +90,83 @@
 
 
 
-<ion-item style="--background: #e2a7a961;color: #542b1d;">
+<!-- <ion-item style="--background: #e2a7a961;color: #542b1d;">
   <ion-button slot="end" (click)="product()"> more.. </ion-button>
   <ion-label><b>All Products</b></ion-label>
-</ion-item>
+</ion-item> -->
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div class="content-slider">
+        <div class="item-box">
+          <div class="item-img">
+            <img src="https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg">
+          </div>
+          <div class="item-cat">Cake</div>
+          <div>
+
+          </div>
+        </div>
+        <div class="item-box">
+          <div>
+            <img src="https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg">
+          </div>
+          <div class="item-cat">Cake</div>
+        </div>
+        <div class="item-box">
+          <div>
+            <img src="https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg">
+          </div>
+          <div class="item-cat">Cake</div>
+        </div>
+        <div class="item-box">
+          <div>
+            <img src="https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg">
+          </div>
+          <div class="item-cat">Cake</div>
+        </div>
+        <div class="item-box">
+          <div>
+            <img src="https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg">
+          </div>
+          <div class="item-cat">Cake</div>
+        </div>
+        <div class="item-box">
+          <div>
+            <img src="https://foodess.com/wp-content/uploads/2018/04/White-Chocolate-Cherry-Cake-1-11.jpg">
+          </div>
+          <div class="item-cat">Cake</div>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<div class="best-seller-bg">
+  <div class="title">Our Best Seller Cakes</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <img src="//d3s16h6oq3j5fb.cloudfront.net/1.74.3.0/img/mobile-home/black-forest.jpg">
+        <ion-label color="primary">Black Forest Cakes</ion-label>
+      </ion-col>
+      <ion-col size="6">
+          <img src="//d3s16h6oq3j5fb.cloudfront.net/1.74.3.0/img/mobile-home/red-velvet.jpg">
+          <ion-label color="primary">Red Velvet Cakes</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <img src="//d3s16h6oq3j5fb.cloudfront.net/1.74.3.0/img/mobile-home/chocolate.jpg">
+        <ion-label color="primary">Chocolate Cakes</ion-label>
+      </ion-col>
+      <ion-col size="6">
+        <img src="//d3s16h6oq3j5fb.cloudfront.net/1.74.3.0/img/mobile-home/butterscotch.jpg">
+        <ion-label color="primary">Butterscotch Cakes</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
 
 
 <div>

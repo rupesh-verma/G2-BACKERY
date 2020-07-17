@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  baseUrl: any = environment.baseUrl;
+  baseUrl: any; //= environment.baseUrl;
   verifyId: any;
   verifynuberCode: any;
   verifynumber: any;

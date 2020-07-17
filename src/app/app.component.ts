@@ -127,7 +127,8 @@ export class AppComponent {
     // this.storage.get('token').then((val) => {
     //   console.log(val)
     // });
-    return localStorage.getItem('token') != null;
+   // return localStorage.getItem('token') != null;
+    return true;
   }
 
   logout() {

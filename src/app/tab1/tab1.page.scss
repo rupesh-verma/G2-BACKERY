@@ -1,8 +1,8 @@
-.topOffer{
-  // border-radius: 5px;
-  // height: 125px;
-  // width: 100px;
-}
+// .topOffer{
+//   // border-radius: 5px;
+//   // height: 125px;
+//   // width: 100px;
+// }
 .text-block {
   position: absolute;
     bottom: 0px;
@@ -11,4 +11,56 @@
 }
 .segCat{
   height: 50px;
+  width: 5.25rem;
+  border: none !important;
+}
+.scrollable-menu{
+  overflow: auto !important;
+}
+.item-box{
+ // height: 200px;
+  min-width:130px !important;
+  max-width: 130px;
+  padding: 0 5px;
+ // background: rebeccapurple;
+  .item-img{
+      width: 100%;
+    }
+    .item-cat{
+      text-align: center;
+      opacity: 0.7;
+    }
+}
+.item-box img {
+    border-radius: 5px;
+    height: 150px;
+    min-width:120px;
+}
+
+.content-slider{
+
+  display: flex;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+ -ms-overflow-style:none;
+ height: 180px;
+}
+.border-bottom-thik{
+  border-bottom: 3px solid rgb(236, 236, 236);
+}
+.best-seller-bg{
+      background-size: cover;
+    text-align: center;
+    margin-top: 12px;
+  background-image: url('//d3s16h6oq3j5fb.cloudfront.net/1.74.3.0/img/mobile-home/best-seller-bg.jpg');
+  .title{
+    border-bottom: 1px solid #636466;
+    color: #636466;
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 300;
+    padding-top: 40px;
+    margin-bottom: 15px;
+  }
 }
